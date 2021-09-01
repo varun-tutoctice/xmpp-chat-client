@@ -1,0 +1,17 @@
+<button *ngIf="this.loginButton" (click)="login()">LOGIN</button>
+
+<button *ngIf="!this.messageHide" (click)="sendMessage()">SEND MESSAGE</button>
+
+<div>
+    <input *ngIf="!this.messageHide" [(ngModel)]="user" type="text" placeholder="username">
+    <input *ngIf="!this.messageHide" [(ngModel)]="message" type="text" placeholder="message">
+</div>
+
+
+<button *ngIf="!this.messageHide" (click)="createGroup()">CREATE GROUP</button>
+
+<button *ngIf="!this.messageHide" (click)="listRooms()">LIST ROOMS</button>
+
+<button *ngIf="!this.loginButton" (click)="logout()">LOGOUT</button>
+<!-- <h1>LOGING..</h1> -->
+<router-outlet></router-outlet>
